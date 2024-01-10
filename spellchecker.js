@@ -28,6 +28,18 @@ textFileProgress.start()
 await wait(1000)
 textFileProgress.success()
 
+const checkSpellingProgress = createSpinner('Checking spelling')
+checkSpellingProgress.start()
+await wait(1000)
+const errors = spellChecker.checkSpelling(text)
+checkSpellingProgress.success()
 
+if (errors.length > 0) {
+  console.log(chalk.red(`Found ${errors.length} errors`))
+  console.log()
+  errors.forEach((error) => {
+    console.log(chalk.yellow(`"${error.word}" found at line ${error.line}, column ${error.column}`))
+  })
+}
 
 
