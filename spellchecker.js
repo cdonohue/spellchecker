@@ -3,6 +3,7 @@
 import fs from 'fs'
 import chalk from 'chalk'
 import { createSpinner } from 'nanospinner'
+import boxen from 'boxen'
 import { createSpellChecker } from './lib/spellingUtils.js'
 
 const dictionaryPath = process.argv[2]
@@ -38,10 +39,10 @@ if (errors.length > 0) {
   console.log(chalk.red(`Found ${errors.length} errors`))
   console.log()
   errors.forEach((error) => {
-    console.log(chalk.yellow(`
-    "${error.word}" found at line ${error.line}, column ${error.column}
-    
-    `))
+
+    console.log(boxen(error.context, {padding: 1, title: error.word, borderColor: 'yellow'}))
+    console.log(chalk.yellow(`Found at line ${error.line}, column ${error.column}`))
+    console.log('')
   })
 }
 
