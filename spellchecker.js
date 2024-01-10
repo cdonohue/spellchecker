@@ -5,6 +5,7 @@ import chalk from 'chalk'
 import { createSpinner } from 'nanospinner'
 import boxen from 'boxen'
 import { createSpellChecker } from './lib/spellingUtils.js'
+import figlet from 'figlet'
 
 const dictionaryPath = process.argv[2]
 const textFilePath = process.argv[3]
@@ -44,6 +45,17 @@ if (errors.length > 0) {
     console.log(`Suggestions: ${chalk.blue(error.suggestions.join(', '))}`)
     console.log()
   })
+  process.exit(0)
 }
+
+console.log(chalk.green('No spelling errors found'))
+
+figlet('Nice job!', (err, data) => {
+  if (err) {
+    console.log(chalk.red('Error rendering ASCII art'))
+    process.exit(1)
+  }
+  console.log(chalk.green(data))
+})
 
 
