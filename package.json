@@ -1,0 +1,21 @@
+{
+  "name": "spellchecker",
+  "version": "1.0.0",
+  "description": "A spellchecker written for the command line, using nodejs",
+  "main": "spellchecker.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdonohue/spellchecker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdonohue/spellchecker/issues"
+  },
+  "homepage": "https://github.com/cdonohue/spellchecker#readme"
+}
