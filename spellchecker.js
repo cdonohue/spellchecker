@@ -40,9 +40,9 @@ if (errors.length > 0) {
   console.log(chalk.red(`Found ${errors.length} errors`))
   console.log()
   errors.forEach((error) => {
-    console.log(boxen(error.context, {padding: 1, title: error.word, borderColor: 'yellow'}))
-    console.log(chalk.yellow(`Found at line ${error.line}, column ${error.column}`))
-    console.log(`Suggestions: ${chalk.blue(error.suggestions.join(', '))}`)
+    console.log(boxen(`${chalk.dim(error.context.left)} ${error.context.word} ${chalk.dim(error.context.right)}`, {padding: 1, title: error.word, borderColor: 'yellow'}))
+    console.log(chalk.blue(`Found at line ${error.line}, column ${error.column}`))
+    console.log(`Suggestions: ${chalk.cyan(error.suggestions.join(', '))}`)
     console.log()
   })
   process.exit(0)
