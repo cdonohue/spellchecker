@@ -7,6 +7,7 @@ A spellchecker written for the command line, using nodejs
 
 ## Features
 - [x] Checks spelling of a file based on a dictionary
+- [x] Uses a Set to store dictionary words for fast lookup 
 - [x] Outputs a list of misspelled words, including line number and column number
 - [x] Shows the inline context of each misspelled word
 - [x] Outputs a list of suggested words for each misspelled word
