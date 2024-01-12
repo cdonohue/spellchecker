@@ -13,6 +13,7 @@ A spellchecker written for the command line, using nodejs
 - [x] Outputs a list of suggested words for each misspelled word
 - [x] Handles proper nouns and capitalized words
 - [ ] Handles hypens and apostrophes
+- [ ] Use streams to read in text files
 
 ## Installation
 > Requires nodejs version 20.0.0 or higher
