@@ -1,5 +1,9 @@
 # spellchecker
 A spellchecker written for the command line, using nodejs
+![CleanShot 2024-01-10 at 21 44 30](https://github.com/cdonohue/spellchecker/assets/1928846/ab389a09-98b6-4bfb-b8b7-fb716fa9405f)
+
+![CleanShot 2024-01-10 at 21 47 31@2x](https://github.com/cdonohue/spellchecker/assets/1928846/4b214430-c59b-4959-84cb-e07d9b3d6371)
+
 
 ## Features
 - [x] Checks spelling of a file based on a dictionary
